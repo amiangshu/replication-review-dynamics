@@ -9,7 +9,10 @@ A Replication Package for Code Review Peer Pressure Study
    - Rnalytica
    - car
    - doParallel
-   
+
+# Datasets
+- Cleaned_datasets, studied_datasets, and models can be found in [this link](https://unimelbcloud-my.sharepoint.com/:u:/g/personal/patanamon_t_unimelb_edu_au/EfdRyLkhE8tPkT_R2-rGevoBAYV-FcV5vPN91ecROJu85g?e=uUCKe0)
+
 # Analysis Scripts
 - **Data Preparation**: `Rscript data_preparation.R` for linking and selecting data
     - The output will be stored at `studied_data/`   
@@ -29,9 +32,12 @@ Additional Details
 -----
 **Model Formula**
 - Analysis 1
-	- Openstack: `IsVotePositive ~ PositiveVoters_Norm + NumberOfCorePositiveVoters + RemainingOtherComments + InteractionFreqWithAuthor + isAuthorCore + AddedLines + Entropy + DescriptionLength + Author_AuthoringExp + Author_ReviewingExp+ (1|ReviewerId)`
-	- Qt: `IsVotePositive ~ PositiveVoters_Norm + NegativeVoters_Norm + NumberOfCorePositiveVoters + RemainingOtherComments + InteractionFreqWithAuthor + isAuthorCore + AddedLines + NumberOfModifiedDirectories + Entropy + DescriptionLength + Author_AuthoringExp + Author_ReviewingExp+ (1|ReviewerId)`
+  - Openstack: `IsVotePositive ~ PositiveVoters_Norm + NumberOfCorePositiveVoters + RemainingOtherComments + InteractionFreqWithAuthor + isAuthorCore + AddedLines + Entropy + DescriptionLength + Author_AuthoringExp + Author_ReviewingExp+ (1|ReviewerId)`
+  - Qt: `IsVotePositive ~ PositiveVoters_Norm + NegativeVoters_Norm + NumberOfCorePositiveVoters + RemainingOtherComments + InteractionFreqWithAuthor + isAuthorCore + AddedLines + NumberOfModifiedDirectories + Entropy + DescriptionLength + Author_AuthoringExp + Author_ReviewingExp+ (1|ReviewerId)`
+
 - Analysis 2
+  - OpenStack: `IsFixInducing  ~ ND+Entropy+LA+LD+LT+Age+PriorBugFixes+AvgComplexity+NumComments+positive_voters+ReviewingTime+consistentPositiveVote+inconsistentNegativeVote+changeVoteFinal+strongRelationshipAuthor+consistentCorePositiveVotes+coreAuthor+Author_AuthoringExp+Author_ReviewingExp+Fix`
+  - Qt: `IsFixInducing  ~ ND+Entropy+LA+LD+Age+PriorBugFixes+AvgComplexity+NumComments+positive_voters+ReviewingTime+consistentPositiveVote+inconsistentNegativeVote+changeVoteFinal+strongRelationshipAuthor+consistentCorePositiveVotes+coreAuthor+Author_AuthoringExp+Author_ReviewingExp+Fix`
 
 **Regular expressions**
 - *ClassifyHistory.sql* provides a set of regular expressions for cleaning and extracting vote score in review messages
