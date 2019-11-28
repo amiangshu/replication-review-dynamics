@@ -1,4 +1,4 @@
-A Replication Package for Code Review Peer Pressure Study 
+A Replication Package for "Review Dynamics and Its Impact on Software Quality: A Case Study of OpenStack and Qt"
 ===================
 # Environment
 - R version 3.5.1+
