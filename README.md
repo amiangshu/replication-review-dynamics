@@ -13,9 +13,7 @@ A Replication Package for "Review Dynamics and Its Impact on Software Quality: A
 # Datasets
 - Cleaned_datasets, studied_datasets, and models can be found in [this link](https://unimelbcloud-my.sharepoint.com/:u:/g/personal/patanamon_t_unimelb_edu_au/EfdRyLkhE8tPkT_R2-rGevoBAYV-FcV5vPN91ecROJu85g?e=uUCKe0)
 
-# Analysis Scripts
-- **Data Preparation**: `Rscript data_preparation.R` for linking and selecting data
-    - The output will be stored at `studied_data/`   
+# Analysis Scripts  
 - **Analysis 1**: `Rscript Analysis1_modelling.R <project_name>` for build a mixed-effect logistict regression models
     -  The input files are the files in `studied_data/`
     -  The model will be saved in `models/`
